@@ -1,0 +1,12 @@
+Tips for solving simple detection problem
+
+1. try color based blob detection.
+  1.1 HSV color space is more robust to illumination change, but not totally immune to it. So try to use some filter or 
+      morphlogy method to make the color segmentation of object more like a blob.
+  1.2 Use color threshold, maybe on HSV color space to get segmentation of specific color range, which include certain 
+      type of object. Turn this into gray image, maybe better than gray image directly transformed from HSV or RGB image.
+2. try other space-color based segmentation method like meanshift. Though it might be slow but it can have better color blob.
+
+maybe helpful: https://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/
+               https://www.learnopencv.com/blob-detection-using-opencv-python-c/
+               http://www.shervinemami.info/blobs.html
